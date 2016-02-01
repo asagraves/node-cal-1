@@ -8,7 +8,7 @@ describe('cal', () => {
   describe('CLI', () => {
     it('should handle the current month', () => {
       const goal = execSync('cal').toString();
-      const output = execSync('./lib/cal.js').toString();
+      const output = execSync('./cal.js').toString();
 
       expect(output).to.equal(goal);
     });
@@ -26,15 +26,15 @@ describe("Week tests", () => {
   });
 
    it('handles erroneous arguments with letters', () => {
-      expect(execSync('./lib/cal.js 6 b').toString()).to.equal("Arguments are invalid\n");
-      expect(execSync('./lib/cal.js a b').toString()).to.equal("Arguments are invalid\n");
-      expect(execSync('./lib/cal.js a 1973').toString()).to.equal("Arguments are invalid\n");
+      expect(execSync('./cal.js 6 b').toString()).to.equal("Arguments are invalid\n");
+      expect(execSync('./cal.js a b').toString()).to.equal("Arguments are invalid\n");
+      expect(execSync('./cal.js a 1973').toString()).to.equal("Arguments are invalid\n");
   });
 
    it('handles erroneous arguments with numbers', () => {
-     expect(execSync('./lib/cal.js 0 1872').toString()).to.equal("Arguments are invalid\n");
-     expect(execSync('./lib/cal.js 3 1672').toString()).to.equal("Arguments are invalid\n");
-     expect(execSync('./lib/cal.js 3 0').toString()).to.equal("Arguments are invalid\n");
+     expect(execSync('./cal.js 0 1872').toString()).to.equal("Arguments are invalid\n");
+     expect(execSync('./cal.js 3 1672').toString()).to.equal("Arguments are invalid\n");
+     expect(execSync('./cal.js 3 0').toString()).to.equal("Arguments are invalid\n");
    });
 
 });
