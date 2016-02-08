@@ -12,6 +12,14 @@
     "type": "git",
     "url": "git+https://github.com/bbleds/node-cal.git"
   },
+  "eslintConfig": {
+    "env": {
+      "mocha": true,
+      "node": true,
+      "es6": true
+    },
+    "extends": "eslint:recommended"
+  },
   "author": "Benjamin Bledsoe <bledsoedesigns@gmail.com>",
   "license": "MIT",
   "bugs": {
